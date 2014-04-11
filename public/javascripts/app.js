@@ -10,7 +10,7 @@ angular.module('app').controller('AppCtrl', function($scope, $http) {
 
   $scope.weatherData.then(function(data) {
     var rainStatus = [500,501,502,503,504,511,520,521,522,531];
-    $scope.forecast = rainStatus.indexOf(data.data.list[0].weater[0].id) != -1 ? "SI" : "NO";
+    $scope.forecast = rainStatus.indexOf(data.data.list[0].weather[0].id) != -1 ? "SI" : "NO";
     $scope.resize();
   });
 
